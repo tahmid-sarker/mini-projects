@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biker Zone</title>
+    <link rel="shortcut icon" href="./assets/images/bike-icon.png" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/d50fc63bdb.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-poppins text-black">
+    <header class="py-1 lg:py-3 px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20 container mx-auto">
+      <!------------------------------ Navbar ------------------------------>
+      <nav class="navbar p-0 gap-5">
+        <div class="flex-1">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden px-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-2 w-40 p-4 shadow">
+              <li><a class="font-medium text-base">Home</a></li>
+              <li><a class="font-medium text-base">Shop</a></li>
+              <li><a class="font-medium text-base">News</a></li>
+              <li><a class="font-medium text-base">Contact</a></li>
+              <li class="sm:hidden">
+                <a class="font-medium text-base">Login</a>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-4xl font-bold py-0 px-2 lg:px-0">Biker Zone</a>
+        </div>
+        <div class="hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="xl:px-1"><a class="font-medium text-base px-6">Home</a></li>
+            <li class="xl:px-1"><a class="font-medium text-base px-6">Shop</a></li>
+            <li class="xl:px-1"><a class="font-medium text-base px-6">News</a></li>
+            <li class="xl:px-1"><a class="font-medium text-base px-6">Contact</a></li>
+          </ul>
+        </div>
+        <div class="hidden sm:block">
+          <a class="btn btn-neutral px-8 py-2 lg:py-3 border-none text-white text-base bg-[#e76f51]">Login</a>
+        </div>
+      </nav>
+
+      <!------------------------------ Hero Section ------------------------------>
+      <section class="hero mt-10 lg:mt-6 lg:bg-[#e76f51] lg:bg-opacity-10 lg:rounded-xl">
+        <div class="hero-content p-0 lg:p-10 lg:pl-[3.8rem] flex-col lg:flex-row gap-14 lg:gap-0 xl:gap-8">
+          <div class="md:max-w-xl lg:max-w-[428px] xl:max-w-lg 2xl:max-w-xl md:self-start lg:self-center">
+            <h1 class="text-6xl font-bold">Power Your Journey With The Perfect Bike</h1>
+            <p class="py-6 opacity-80">
+              Explore our premium collection of bikes built for every adventure. Ride with confidence, ride with style!
+            </p>
+            <button class="btn btn-neutral px-8 py-2 lg:py-3 border-none text-white text-base bg-[#e76f51]">Purchase</button>
+          </div>
+          <!------------------------------ Slider ------------------------------>
+          <div class="carousel w-full lg:min-w-none">
+            <div id="slide1" class="carousel-item relative w-full">
+              <div class="max-w-md xl:max-w-lg mx-auto flex items-center lg:px-8 xl:px-0">
+                <img src="./assets/images/bike-1.png" loading="lazy" alt="Bike 1"/>
+              </div>
+              <div class="absolute left-0 right-0 top-1/2 hidden lg:flex -translate-y-1/2 transform justify-between">
+                <a href="#slide4" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#slide2" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <div class="max-w-md xl:max-w-lg mx-auto flex items-center lg:px-8 xl:px-0">
+                <img src="./assets/images/bike-2.png" loading="lazy" alt="Bike 2"/>
+              </div>
+              <div class="absolute left-0 right-0 top-1/2 hidden lg:flex -translate-y-1/2 transform justify-between">
+                <a href="#slide1" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#slide3" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <div class="max-w-md xl:max-w-lg mx-auto flex items-center lg:px-8 xl:px-0">
+                <img src="./assets/images/bike-3.png" loading="lazy" alt="Bike 3"/>
+              </div>
+              <div class="absolute left-0 right-0 top-1/2 hidden lg:flex -translate-y-1/2 transform justify-between">
+                <a href="#slide2" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#slide4" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <div class="max-w-md xl:max-w-lg mx-auto flex items-center lg:px-8 xl:px-0">
+                <img src="./assets/images/bike-4.png" loading="lazy" alt="Bike 4"/>
+              </div>
+              <div class="absolute left-0 right-0 top-1/2 hidden lg:flex -translate-y-1/2 transform justify-between">
+                <a href="#slide3" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#slide1" class="btn btn-circle btn-ghost"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="py-4 px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20 container mx-auto">
+      <!------------------------------ Featured Bikes ------------------------------>
+      <section class="my-16">
+        <h2 class="text-4xl font-semibold text-center">Featured Bikes In This Year</h2>
+        <h5 class="text-sm text-center my-2 text-[#e76f51] mb-1">Best Bike Collection</h5>
+        <div class="border-b border-[#e76f51] w-16 mx-auto"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 my-12">
+          <div class="mx-auto grayscale">
+            <img src="./assets/images/feature-bike.png" loading="lazy" alt="Feature Bike"/>
+          </div>
+          <div class="mx-auto">
+            <img src="./assets/images/feature-bike.png" loading="lazy" alt="Feature Bike"/>
+          </div>
+          <div class="mx-auto sm:hidden lg:block grayscale">
+            <img src="./assets/images/feature-bike.png" loading="lazy" alt="Feature Bike"/>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------ Latest News ------------------------------>
+      <section class="my-24">
+        <h2 class="text-4xl font-semibold text-center">Latest News</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-4 xl:gap-6 2xl:gap-8 my-10 max-w-[22rem] sm:max-w-none mx-auto">
+          <div class="card card-compact w-full border">
+            <figure class="p-4">
+              <img src="./assets/images/latest-1.png" loading="lazy" alt="Latest 1" class="w-full"/>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title font-semibold text-2xl">Honda CBR500R</h2>
+              <p class="text-[#6c6c6c]">
+                Designed for smooth rides and maximum performance, this bike is perfect for city commutes and long-distance adventures.
+              </p>
+              <div class="card-actions mt-4">
+                <button class="btn btn-outline px-6 py-2 lg:py-3 text-base text-[#e76f51] hover:text-white bg-white hover:bg-[#e76f51] hover:border-white">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact w-full border">
+            <figure class="p-4">
+              <img src="./assets/images/latest-2.png" loading="lazy" alt="Latest 2" class="w-full"/>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title font-semibold text-2xl">Honda CBR500R</h2>
+              <p class="text-[#6c6c6c]">
+                Designed for smooth rides and maximum performance, this bike is perfect for city commutes and long-distance adventures.
+              </p>
+              <div class="card-actions mt-4">
+                <button class="btn btn-outline px-6 py-2 lg:py-3 text-base text-[#e76f51] hover:text-white bg-white hover:bg-[#e76f51] hover:border-white">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact w-full border sm:hidden lg:block">
+            <figure class="p-4">
+              <img src="./assets/images/latest-3.png" loading="lazy" alt="Latest 3" class="w-full"/>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title font-semibold text-2xl">Honda CBR500R</h2>
+              <p class="text-[#6c6c6c]">
+                Designed for smooth rides and maximum performance, this bike is perfect for city commutes and long-distance adventures.
+              </p>
+              <div class="card-actions mt-4">
+                <button class="btn btn-outline px-6 py-2 lg:py-3 text-base text-[#e76f51] hover:text-white bg-white hover:bg-[#e76f51] hover:border-white">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------ Happy Clients Says ------------------------------>
+      <section class="my-24">
+        <h2 class="text-4xl font-semibold text-center">Happy <span class="text-[#e76f51]">Clients Says</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 2xl:gap-10 my-10 w-[90%] sm:w-full max-w-80 sm:max-w-none md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto">
+          <div class="card border pt-8">
+            <div class="avatar w-24 rounded-full mx-auto">
+              <img src="./assets/images/user.png" loading="lazy" alt="User 1" />
+            </div>
+            <div class="card-body items-center text-center">
+              <p class="text-sm text-[#6c6c6c]">
+                Best bike I've ever owned! Excellent service, fast shipping and the quality is unbeatable.
+              </p>
+              <div class="rating my-4 gap-2">
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+              </div>
+              <h2 class="card-title font-semibold text-base text-[#23a6f0]">Tahmid Sarker</h2>
+              <h2 class="card-title font-semibold text-sm">Software Engineer</h2>
+            </div>
+          </div>
+          <div class="card border pt-8">
+            <div class="avatar w-24 rounded-full mx-auto">
+              <img src="./assets/images/user.png" loading="lazy" alt="User 2" />
+            </div>
+            <div class="card-body items-center text-center">
+              <p class="text-sm text-[#6c6c6c]">
+                Best bike I've ever owned! Excellent service, fast shipping and the quality is unbeatable.
+              </p>
+              <div class="rating my-4 gap-2">
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+              </div>
+              <h2 class="card-title font-semibold text-base text-[#23a6f0]">Tahmid Sarker</h2>
+              <h2 class="card-title font-semibold text-sm">Student</h2>
+            </div>
+          </div>
+          <div class="card border pt-8 sm:hidden lg:block">
+            <div class="avatar w-24 rounded-full mx-auto sm:hidden lg:block">
+              <img src="./assets/images/user.png" loading="lazy" alt="User 3" />
+            </div>
+            <div class="card-body items-center text-center">
+              <p class="text-sm text-[#6c6c6c]">
+                Best bike I've ever owned! Excellent service, fast shipping and the quality is unbeatable.
+              </p>
+              <div class="rating my-4 gap-2">
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" checked="checked"/>
+                <input type="radio" name="rating-2" class="mask mask-star bg-orange-400"/>
+              </div>
+              <h2 class="card-title font-semibold text-base text-[#23a6f0]">Tahmid Sarker</h2>
+              <h2 class="card-title font-semibold text-sm">Businessman</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------ Frequently Asked Questions ------------------------------>
+      <section class="my-20">
+        <h2 class="text-4xl font-semibold text-center">Frequently Asked <span class="text-[#e76f51]">Questions</span></h2>
+        <div class="hero my-10">
+          <div class="hero-content flex-col lg:flex-row p-0 gap-10 sm:gap-8 lg:justify-between 2xl:max-w-6xl">
+            <img src="./assets/images/faq.png" loading="lazy" alt="Big Question Mark" class="w-full max-w-[20rem] lg:max-w-[45%] xl:max-w-[40%]"/>
+            <div class="flex flex-col gap-4 w-full max-w-[28rem] sm:max-w-lg md:max-w-xl lg:max-w-[50%] xl:max-w-[52%]">
+              <div class="collapse collapse-arrow border px-1 xl:py-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-md sm:text-lg font-medium">
+                  What are the most important things I should know about riding a bike?
+                </div>
+                <div class="collapse-content">
+                  <p class="text-sm text-[#7E848C]">
+                    Safety First! Always obey the rules of the road. Obey all
+                    traffic signals, signs and laws. Get in the mindset of
+                    "driving" your bike — not just "riding" your bike. This will
+                    help you to become a more focused and legally compliant bike
+                    rider.
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border px-1 xl:py-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-md sm:text-lg font-medium">
+                  What are the most important things I should know about riding a bike?
+                </div>
+                <div class="collapse-content">
+                  <p class="text-sm text-[#7E848C]">
+                    Safety First! Always obey the rules of the road. Obey all
+                    traffic signals, signs and laws. Get in the mindset of
+                    "driving" your bike — not just "riding" your bike. This will
+                    help you to become a more focused and legally compliant bike
+                    rider.
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border px-1 xl:py-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-md sm:text-lg font-medium">
+                  What are the most important things I should know about riding a bike?
+                </div>
+                <div class="collapse-content">
+                  <p class="text-sm text-[#7E848C]">
+                    Safety First! Always obey the rules of the road. Obey all
+                    traffic signals, signs and laws. Get in the mindset of
+                    "driving" your bike — not just "riding" your bike. This will
+                    help you to become a more focused and legally compliant bike
+                    rider.
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border px-1 xl:py-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-md sm:text-lg font-medium">
+                  What are the most important things I should know about riding a bike?
+                </div>
+                <div class="collapse-content">
+                  <p class="text-sm text-[#7E848C]">
+                    Safety First! Always obey the rules of the road. Obey all
+                    traffic signals, signs and laws. Get in the mindset of
+                    "driving" your bike — not just "riding" your bike. This will
+                    help you to become a more focused and legally compliant bike
+                    rider.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-[#d9dbe1]">
+      <div class="py-24 px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20 container mx-auto flex flex-col lg:flex-row lg:justify-between gap-10">
+        <div class="space-y-4">
+          <ul class="grid grid-cols-2 gap-12 sm:gap-14 md:gap-6 lg:gap-0 xl:gap-10 max-w-72 sm:max-w-80">
+            <li><a class="link link-hover">Download Now</a></li>
+            <li><a class="link link-hover">License</a></li>
+          </ul>
+          <ul class="grid md:flex grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-12 lg:gap-x-9 xl:gap-x-14 max-w-72 sm:max-w-lg md:max-w-none">
+            <li><a class="link link-hover">About</a></li>
+            <li><a class="link link-hover">Features</a></li>
+            <li><a class="link link-hover">Pricing</a></li>
+            <li><a class="link link-hover">Careers</a></li>
+            <li><a class="link link-hover">Help</a></li>
+            <li><a class="link link-hover">Privacy Policy</a></li>
+          </ul>
+          <p class="text-sm">&copy; Biker Zone. All rights reserved.</p>
+        </div>
+        <div>
+          <h4 class="text-lg mb-4">Get The App</h4>
+          <div class="flex gap-4">
+            <div class="max-w-40">
+              <a href="https://www.apple.com/app-store/" target="_blank">
+                <img src="./assets/images/ios.png" loading="lazy" alt="App Store" class="hover:opacity-80"/>
+              </a>
+            </div>
+            <div class="max-w-40">
+              <a href="https://play.google.com/store/" target="_blank">
+                <img src="./assets/images/android.png" loading="lazy" alt="Play Store" class="hover:opacity-80"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
